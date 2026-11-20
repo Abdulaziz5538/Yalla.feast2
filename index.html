@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yalla Feast — Burgers, Pizza & Hot Delivery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-ring"></div>
+    <div class="preloader-logo">🔥</div>
+    <h2 class="preloader-title">YALLA <span>FEAST</span></h2>
+    <p class="preloader-sub">Firing up the stone ovens &amp; grills...</p>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span id="toastText">Added to cart!</span>
+  </div>
+
+  <!-- 1. NAVIGATION BAR -->
+  <header id="navbar" class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-badge">🔥</span>
+        <span class="logo-text-wrap">
+          <span class="logo-title">YALLA<span>FEAST</span></span>
+          <span class="logo-tagline">Burgers • Pizza • Hot</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="desktopNav">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+998712007788" class="hotline-pill">📞 1177 • Fast Delivery</a>
+
+        <button id="openFavoritesBtn" class="icon-btn" aria-label="Favorites">
+          <span>❤️</span>
+          <span id="favCountBadge" class="badge-dot">2</span>
+        </button>
+
+        <button id="openCartBtn" class="cart-btn" aria-label="Open Cart">
+          <span>🛍️</span>
+          <span class="cart-label">Cart</span>
+          <span id="cartCountBadge" class="cart-count">1</span>
+        </button>
+
+        <button id="mobileMenuBtn" class="icon-btn mobile-only" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileNav" class="mobile-nav">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#menu" class="mobile-link">Full Menu</a>
+      <a href="#offers" class="mobile-link">Special Offers</a>
+      <a href="#combos" class="mobile-link">Combo Deals</a>
+      <a href="#about" class="mobile-link">Why Yalla Feast</a>
+      <a href="#contact" class="mobile-link">Locations &amp; Contact</a>
+      <div class="mobile-nav-meta">
+        <span>Hotline: +998 71 200-77-88</span>
+        <span>30 Min Delivery</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section id="home" class="hero">
+    <div id="parallaxOrb1" class="hero-orb hero-orb-1"></div>
+    <div id="parallaxOrb2" class="hero-orb hero-orb-2"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">✨ Hot &amp; Fresh Delivery in 30 Minutes</div>
+        <h1 class="hero-title">
+          Taste the <span>Happiness!</span>
+        </h1>
+        <p class="hero-desc">
+          Flame-grilled 100% halal smash burgers, stone-baked stretchy sourdough pizzas, and crispy golden buckets — delivered sizzling straight to your door.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary btn-glow">Order Now →</a>
+          <a href="#combos" class="btn btn-outline-light">Explore Menu</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="stat-val yellow">30 min</div>
+            <div class="stat-lbl">Express Delivery</div>
+          </div>
+          <div>
+            <div class="stat-val white">4.9 ★</div>
+            <div class="stat-lbl">12,500+ Reviews</div>
+          </div>
+          <div>
+            <div class="stat-val orange">100%</div>
+            <div class="stat-lbl">Halal Certified</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card-wrap">
+          <div class="hero-glow"></div>
+          <div class="hero-img-card">
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=1000&amp;q=90"
+              alt="Yalla Double Smash Royale"
+              class="hero-main-img"
+            />
+            <div class="hero-img-overlay"></div>
+            <div class="hero-img-caption">
+              <div>
+                <span class="mini-tag">#1 Best Seller</span>
+                <h3>Yalla Double Smash Royale</h3>
+              </div>
+              <button id="heroQuickAddBtn" class="hero-price-btn">+ 48 000 so'm</button>
+            </div>
+          </div>
+
+          <div class="floating-discount float-slow">
+            <span class="disc-top">Promo</span>
+            <span class="disc-big">20%</span>
+            <span class="disc-bot">OFF</span>
+          </div>
+
+          <div class="floating-delivery float-reverse">
+            <div class="deliv-emoji">🍕</div>
+            <div>
+              <div class="deliv-title">FREE DELIVERY</div>
+              <div class="deliv-sub">Orders over 100 000 so'm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. POPULAR PRODUCTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header-row reveal">
+        <div>
+          <span class="eyebrow">🔥 Customer Favorites</span>
+          <h2 class="section-title">Most Popular Cravings</h2>
+        </div>
+        <a href="#menu" class="link-accent">View All 27 Dishes →</a>
+      </div>
+
+      <div id="popularGrid" class="cards-grid popular-grid"></div>
+    </div>
+  </section>
+
+  <!-- 5. SPECIAL OFFERS BANNER -->
+  <section id="offers" class="section-sm">
+    <div class="container">
+      <div class="promo-banner reveal">
+        <div class="promo-orb"></div>
+        <div class="promo-grid">
+          <div>
+            <span class="promo-pill">🎁 Limited Time Feast Deal</span>
+            <h2 class="promo-title">Get <span>20% OFF</span> Your First Online Order!</h2>
+            <p class="promo-desc">
+              Apply promo code at checkout for instant savings on all burgers, stone-baked pizzas, and combo boxes. Plus free delivery over 100 000 so'm!
+            </p>
+            <div class="promo-actions">
+              <button id="copyPromoBtn" class="promo-code-btn">
+                <span>CODE: YALLA20</span>
+                <span id="copyPromoIcon">📋</span>
+              </button>
+              <a href="#menu" class="btn btn-white">Claim &amp; Order Now</a>
+            </div>
+          </div>
+
+          <div class="promo-img-box">
+            <div class="promo-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                alt="Pepperoni Volcano Pizza"
+              />
+              <div class="promo-caption">🍕 Pepperoni Volcano 32cm — Only 63 200 so'm with YALLA20!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FULL MENU WITH SEARCH, SORT & 9 CATEGORIES -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-header-center reveal">
+        <span class="eyebrow">🍽️ Freshly Cooked To Order</span>
+        <h2 class="section-title">Explore Our Full Menu</h2>
+        <p class="section-sub">
+          Tap any dish to customize size, extra cheese, or sauces — or click Add to Cart to drop straight into your bag.
+        </p>
+      </div>
+
+      <div class="menu-controls">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search burgers, pepperoni, fries, combos..."
+          />
+          <button id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search">✕</button>
+        </div>
+
+        <div class="sort-box">
+          <label for="sortSelect">Sort by:</label>
+          <select id="sortSelect">
+            <option value="featured">Recommended</option>
+            <option value="rating">Highest Rated ★</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="categoryTabs" class="category-tabs"></div>
+
+      <div id="menuGrid" class="cards-grid menu-grid"></div>
+
+      <div id="emptyMenuState" class="empty-state hidden">
+        <div class="empty-emoji">🔍</div>
+        <h3>No dishes found</h3>
+        <p>Try clearing your search filter or browsing another category.</p>
+        <button id="resetFiltersBtn" class="btn btn-primary">Reset Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. COMBO MEALS SECTION -->
+  <section id="combos" class="section dark-section">
+    <div class="container">
+      <div class="section-header-row reveal">
+        <div>
+          <span class="eyebrow dark-eyebrow">🍱 Big Value Bundles</span>
+          <h2 class="section-title white">Mega Feast Combo Boxes</h2>
+        </div>
+        <p class="dark-sub">
+          Save up to 22% when you bundle our signature burgers and pizzas with crispy sides and ice-cold drinks.
+        </p>
+      </div>
+
+      <div id="combosGrid" class="combos-grid"></div>
+    </div>
+  </section>
+
+  <!-- 7. WHY CHOOSE US -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header-center reveal">
+        <span class="eyebrow">Why Yalla Feast</span>
+        <h2 class="section-title">Crafted With Passion, Delivered With Speed</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon orange-bg">🚚</div>
+          <h3>30-Minute Hot Delivery</h3>
+          <p>Thermal-insulated delivery bags lock in oven-fresh heat from our kitchen straight to your table.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon green-bg">🛡️</div>
+          <h3>100% Halal &amp; Fresh</h3>
+          <p>Farm-fresh local vegetables, daily baked brioche buns, and certified halal premium cuts.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon red-bg">🔥</div>
+          <h3>400°C Stone-Deck Ovens</h3>
+          <p>Our hand-stretched sourdough pizzas blister in 90 seconds for an airy, crispy crust.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon yellow-bg">🏆</div>
+          <h3>12,500+ Happy Foodies</h3>
+          <p>Rated 4.9 stars across Tashkent, Andijan, and Samarkand for generous portions and flavor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CUSTOMER REVIEWS -->
+  <section class="section reviews-section">
+    <div class="container">
+      <div class="section-header-center reveal">
+        <span class="eyebrow white-pill">★ Verified Customer Reviews</span>
+        <h2 class="section-title">What Our Guests Are Saying</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">“Honestly the fastest delivery in Tashkent! My Pepperoni Volcano arrived piping hot in 24 minutes and the cheese pull was unreal.”</p>
+          </div>
+          <div class="review-footer">
+            <div class="avatar bg-orange">SK</div>
+            <div>
+              <div class="reviewer-name">Sardor Karimov</div>
+              <div class="reviewer-role">Tashkent, Yunusabad</div>
+            </div>
+            <div class="ordered-pill">Ordered: Yalla Pepperoni Volcano 32cm</div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">“The Double Smash Royale beats every burger place in town. Juicy halal beef, soft brioche bun, and that smoky secret sauce is addictive!”</p>
+          </div>
+          <div class="review-footer">
+            <div class="avatar bg-red">MR</div>
+            <div>
+              <div class="reviewer-name">Madina Rahimova</div>
+              <div class="reviewer-role">Andijan, Bobur Avenue</div>
+            </div>
+            <div class="ordered-pill">Ordered: Yalla Mega Burger Feast Box</div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">“Ordered the Family Pizza &amp; Wings combo for movie night. Huge portions, super clean packaging, and saved 20% with code YALLA20.”</p>
+          </div>
+          <div class="review-footer">
+            <div class="avatar bg-amber">JT</div>
+            <div>
+              <div class="reviewer-name">Jasur Toshmatov</div>
+              <div class="reviewer-role">Tashkent, Chilanzar</div>
+            </div>
+            <div class="ordered-pill">Ordered: Family Pizza &amp; Wings Party Combo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9, 10, 11. LOCATIONS, CONTACT & NEWSLETTER -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header-center reveal">
+        <span class="eyebrow">📍 Visit or Contact Us</span>
+        <h2 class="section-title">Our Restaurant Branches</h2>
+      </div>
+
+      <div class="branches-grid">
+        <div class="branch-card reveal">
+          <span class="branch-badge">Late Night Open</span>
+          <h3>Tashkent Flagship</h3>
+          <p>📍 Amir Temur Avenue 45, Yunusabad District</p>
+          <p>🕒 10:00 AM – 03:00 AM (Daily)</p>
+          <p>📞 <a href="tel:+998712007788">+998 71 200-77-88</a></p>
+        </div>
+
+        <div class="branch-card reveal">
+          <span class="branch-badge">Drive-Thru Available</span>
+          <h3>Andijan Central</h3>
+          <p>📍 Bobur Shoh Street 18, Next to Navruz Mall</p>
+          <p>🕒 10:00 AM – 01:00 AM (Daily)</p>
+          <p>📞 <a href="tel:+998742235599">+998 74 223-55-99</a></p>
+        </div>
+
+        <div class="branch-card reveal">
+          <span class="branch-badge">Family Lounge</span>
+          <h3>Samarkand Plaza</h3>
+          <p>📍 Mirzo Ulugbek Street 72, Center</p>
+          <p>🕒 10:00 AM – 02:00 AM (Daily)</p>
+          <p>📞 <a href="tel:+998662341122">+998 66 234-11-22</a></p>
+        </div>
+      </div>
+
+      <div class="contact-newsletter-grid">
+        <div class="contact-box reveal">
+          <h3>Send Us a Message or Catering Inquiry</h3>
+          <p class="box-sub">Planning a birthday party, office lunch, or have feedback? We reply within 15 minutes.</p>
+
+          <div id="contactSuccess" class="success-box hidden">
+            <div class="success-icon">✅</div>
+            <h4>Message Received!</h4>
+            <p>Thank you! Our restaurant manager will call or message you shortly.</p>
+            <button id="resetContactBtn" class="btn btn-sm btn-green">Send Another Message</button>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <div class="form-row-2">
+              <input type="text" required placeholder="Your Full Name" />
+              <input type="tel" required placeholder="Phone (+998 90 123 45 67)" />
+            </div>
+            <textarea rows="3" required placeholder="How can we make your feast awesome?"></textarea>
+            <button type="submit" class="btn btn-dark full-width">✉️ Send Message</button>
+          </form>
+        </div>
+
+        <div class="newsletter-box reveal">
+          <div>
+            <span class="vip-pill">✉️ Secret VIP Deals</span>
+            <h3>Join the Yalla Feast Club</h3>
+            <p class="vip-sub">
+              Subscribe for weekly free-pizza giveaways, secret menu drops, and a welcome voucher worth <strong>15 000 so'm</strong>.
+            </p>
+          </div>
+
+          <div id="newsletterSuccess" class="vip-success hidden">
+            <div class="vip-emoji">🎉</div>
+            <div class="vip-done-title">You're in the VIP Club!</div>
+            <div class="vip-done-sub">Use code <strong>WELCOME15</strong> at checkout.</div>
+          </div>
+
+          <form id="newsletterForm" class="newsletter-form">
+            <input id="newsletterEmail" type="email" required placeholder="Enter your email address..." />
+            <button type="submit" class="btn btn-gold full-width">Unlock 15 000 so'm Voucher</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">
+            <span class="logo-badge">🔥</span>
+            <span class="logo-title white">YALLA<span>FEAST</span></span>
+          </div>
+          <p class="footer-about">
+            Uzbekistan's favorite modern fast-food kitchen serving flame-grilled halal burgers, stone-baked pizzas, and crispy chicken combos.
+          </p>
+          <div class="social-row">
+            <a href="#contact" aria-label="Instagram">📷</a>
+            <a href="#contact" aria-label="Facebook">📘</a>
+            <a href="https://wa.me/998712007788" target="_blank" rel="noreferrer" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="#menu" data-cat="burgers" class="footer-cat-link">🍔 Smash Burgers</a></li>
+            <li><a href="#menu" data-cat="pizza" class="footer-cat-link">🍕 Stone-Baked Pizza</a></li>
+            <li><a href="#menu" data-cat="chicken" class="footer-cat-link">🍗 Crispy Chicken Buckets</a></li>
+            <li><a href="#menu" data-cat="combos" class="footer-cat-link">🍱 Mega Combo Deals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Yalla Feast</a></li>
+            <li><a href="#offers">Promo Codes &amp; Deals</a></li>
+            <li><a href="#contact">Restaurant Locations</a></li>
+            <li><a href="#contact">Halal Quality Standard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>24/7 Delivery Hotline</h4>
+          <div class="hotline-big">+998 71 200-77-88</div>
+          <p class="hotline-note">Short Number: <strong>1177</strong> • Free delivery on orders over 100 000 so'm.</p>
+          <div class="payment-badges">
+            <span>UZCARD</span>
+            <span>HUMO</span>
+            <span>PAYME</span>
+            <span>CLICK</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="yearSpan">2026</span> Yalla Feast Restaurant Group. All rights reserved.</p>
+        <p>Crafted for hungry food lovers in Uzbekistan 🇺🇿</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP & SCROLL TO TOP -->
+  <div class="floating-actions">
+    <a href="https://wa.me/998712007788" target="_blank" rel="noreferrer" class="fab-wa" title="Order via WhatsApp">💬</a>
+    <button id="scrollTopBtn" class="fab-top" aria-label="Scroll to top">↑</button>
+  </div>
+
+  <!-- PRODUCT CUSTOMIZATION MODAL -->
+  <div id="productModal" class="modal-backdrop hidden">
+    <div id="productModalCard" class="modal-card">
+      <button id="closeProductModal" class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="" />
+        <span id="modalBadge" class="food-badge"></span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span id="modalCategory" class="cat-label"></span>
+          <span id="modalStats"></span>
+        </div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc" class="modal-desc"></p>
+
+        <div id="modalSizesSection" class="modal-section">
+          <div class="modal-label">Choose Size / Portion</div>
+          <div id="modalSizesList" class="sizes-grid"></div>
+        </div>
+
+        <div id="modalExtrasSection" class="modal-section">
+          <div class="modal-label">Add Extra Toppings &amp; Sauces</div>
+          <div id="modalExtrasList" class="extras-list"></div>
+        </div>
+
+        <div class="modal-footer-bar">
+          <div class="qty-box lg">
+            <button id="modalQtyMinus" type="button">−</button>
+            <span id="modalQtyVal">1</span>
+            <button id="modalQtyPlus" type="button">+</button>
+          </div>
+          <button id="modalAddBtn" type="button" class="btn btn-primary flex-1">
+            Add to Cart • <span id="modalTotalPrice">0 so'm</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAVORITES DRAWER -->
+  <div id="favoritesDrawer" class="drawer-backdrop hidden">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h3>❤️ Saved Favorites (<span id="favDrawerCount">0</span>)</h3>
+        <button id="closeFavoritesBtn" class="icon-btn">✕</button>
+      </div>
+      <div id="favoritesList" class="drawer-body"></div>
+    </div>
+  </div>
+
+  <!-- SHOPPING CART SIDE DRAWER -->
+  <div id="cartDrawer" class="drawer-backdrop hidden">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span class="drawer-icon">🛍️</span>
+          <div>
+            <h3>Your Feast Bag</h3>
+            <span id="cartSubtitle" class="drawer-sub">1 items selected</span>
+          </div>
+        </div>
+        <button id="closeCartBtn" class="icon-btn">✕</button>
+      </div>
+
+      <div id="deliveryProgressBar" class="delivery-banner"></div>
+
+      <div id="cartItemsContainer" class="drawer-body"></div>
+
+      <div id="cartFooter" class="drawer-footer">
+        <div class="summary-rows">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">0 so'm</strong>
+          </div>
+          <div id="cartDiscountRow" class="summary-row discount hidden">
+            <span id="cartDiscountLabel">Discount</span>
+            <strong id="cartDiscountVal">-0 so'm</strong>
+          </div>
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <strong id="cartDeliveryFee">0 so'm</strong>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <strong id="cartGrandTotal">0 so'm</strong>
+          </div>
+        </div>
+
+        <button id="proceedCheckoutBtn" class="btn btn-primary full-width">Proceed to Checkout →</button>
+        <button id="whatsappOrderBtn" class="btn btn-whatsapp full-width">💬 Quick Order via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div id="checkoutModal" class="modal-backdrop hidden">
+    <div class="modal-card checkout-card">
+      <button id="closeCheckoutModal" class="modal-close" aria-label="Close">✕</button>
+
+      <div id="checkoutFormView">
+        <h3>Complete Your Order</h3>
+        <p class="checkout-sub">Fast delivery across Tashkent, Andijan &amp; Samarkand</p>
+
+        <div class="order-type-switch">
+          <button type="button" id="typeDeliveryBtn" class="switch-btn active">🛵 Express Delivery</button>
+          <button type="button" id="typePickupBtn" class="switch-btn">🏪 Self Pickup</button>
+        </div>
+
+        <form id="checkoutForm" class="checkout-form">
+          <div class="form-row-2">
+            <div>
+              <label>Your Name *</label>
+              <input id="custName" type="text" required placeholder="Abdulaziz" />
+            </div>
+            <div>
+              <label>Phone Number *</label>
+              <input id="custPhone" type="tel" required value="+998 " />
+            </div>
+          </div>
+
+          <div id="deliveryAddressGroup">
+            <label>Delivery Address (Street, House, Apartment) *</label>
+            <input id="custAddress" type="text" required placeholder="e.g. Amir Temur Ave 45, Apt 12" />
+          </div>
+
+          <div id="pickupBranchGroup" class="hidden">
+            <label>Select Branch *</label>
+            <select id="custBranch">
+              <option value="Tashkent Flagship">Tashkent Flagship — Amir Temur Avenue 45</option>
+              <option value="Andijan Central">Andijan Central — Bobur Shoh Street 18</option>
+              <option value="Samarkand Plaza">Samarkand Plaza — Mirzo Ulugbek Street 72</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Payment Method</label>
+            <div class="payment-switch">
+              <button type="button" data-pay="cash" class="pay-btn active">💵 Cash</button>
+              <button type="button" data-pay="payme" class="pay-btn">💳 Payme / Click</button>
+              <button type="button" data-pay="card" class="pay-btn">💳 Uzcard / Humo</button>
+            </div>
+          </div>
+
+          <div class="checkout-summary-box">
+            <div class="summary-row">
+              <span>Items (<span id="chkCount">0</span>)</span>
+              <span id="chkSubtotal">0 so'm</span>
+            </div>
+            <div id="chkDiscountLine" class="summary-row discount hidden">
+              <span>Promo Discount</span>
+              <span id="chkDiscount">0 so'm</span>
+            </div>
+            <div class="summary-row">
+              <span>Delivery</span>
+              <span id="chkDelivery">0 so'm</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total to Pay</span>
+              <span id="chkTotal" class="accent-text">0 so'm</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">
+            Place Order Now • <span id="chkSubmitTotal">0 so'm</span>
+          </button>
+        </form>
+      </div>
+
+      <div id="checkoutSuccessView" class="order-confirmed hidden">
+        <div class="confirmed-badge">🎉</div>
+        <span id="confirmedOrderNum" class="order-num-pill">Order #YF-123456</span>
+        <h3>Order Confirmed! 🔥</h3>
+        <p id="confirmedMsg">Thank you! Our chefs have started preparing your feast. Estimated arrival: 25–30 minutes.</p>
+        <div class="confirmed-total-box">
+          Total Paid / Payable: <strong id="confirmedTotal">0 so'm</strong>
+        </div>
+        <button id="backToStoreBtn" class="btn btn-dark full-width">Back to Restaurant</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
